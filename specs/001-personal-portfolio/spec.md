@@ -8,6 +8,12 @@
 
 **Input**: User description: "Build Maisa Alosaimi's bilingual (English + Arabic, with RTL and a language toggle) personal portfolio website as a static site for job/opportunity seeking, hosted on GitHub Pages. Content from her CV (Quality of Life & Wellbeing Specialist). Visual identity follows the Won J You–inspired design system."
 
+## Clarifications
+
+### Session 2026-06-28
+
+- Q: When a first-time visitor opens the site, which language should load by default? → A: Always English first (Arabic reached via the toggle; the manual choice is then remembered).
+
 ## User Scenarios & Testing *(mandatory)*
 
 ### User Story 1 - Recruiter assesses fit and makes contact (Priority: P1)
@@ -140,6 +146,8 @@ A visitor on a phone navigates and reads the whole site comfortably.
   (Open Graph/Twitter) tags, and correct `lang`/`dir` signals.
 - **FR-014**: Arabic content MUST be review-gated — the site MUST NOT be considered launch-
   ready until Maisa has approved the Arabic wording of her name, titles, awards, and roles.
+- **FR-015**: On a first visit (no stored preference), the site MUST load in English (LTR);
+  once the visitor uses the toggle, that choice MUST be remembered for subsequent visits.
 
 ### Key Entities *(content model, no implementation)*
 
@@ -170,12 +178,14 @@ A visitor on a phone navigates and reads the whole site comfortably.
 
 ## Assumptions
 
-- The public contact email is `maisa3333@gmail.com` (Maisa to confirm at review).
+- The public contact email is `maisa3333@gmail.com` (confirmed).
 - Contact is via a direct email link and the LinkedIn profile; no server-side contact form
   or backend is required for v1.
+- The downloadable CV is the existing English PDF, offered in both language views (no separate
+  Arabic CV document exists).
 - The Qaddha prototype canonical link is `https://preview--qadha-recognition-hub.lovable.app/`.
 - The portrait `maisa.png` is used at modest size; a higher-resolution image may replace it
   later without spec changes.
 - The Al Owais Award year is recorded as `1994` exactly as on the CV.
-- English is the default language on first visit; Arabic is reached via the toggle.
+- Default first-load language is English (see Clarifications / FR-015); Arabic via the toggle.
 - The site is a single-page experience with in-page navigation to each section.

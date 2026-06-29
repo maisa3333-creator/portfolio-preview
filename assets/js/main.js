@@ -142,13 +142,14 @@ function wireMobileNav() {
   const setOpen = (open) => {
     menu.classList.toggle("is-open", open);
     btn.setAttribute("aria-expanded", String(open));
+    btn.setAttribute("aria-label", resolve(CONTENT[currentLang], open ? "ui.close" : "ui.menu"));
   };
   btn.addEventListener("click", () => setOpen(!menu.classList.contains("is-open")));
   menu.addEventListener("click", (e) => {
-    if (e.target.closest("a")) setOpen(false);
+    if (e.target.closest("a")) { setOpen(false); btn.focus(); }
   });
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") setOpen(false);
+    if (e.key === "Escape" && menu.classList.contains("is-open")) { setOpen(false); btn.focus(); }
   });
 }
 
@@ -156,29 +157,35 @@ function wireScrollSpy() {
   const links = $$(".nav__link[data-section]");
   if (!links.length || !("IntersectionObserver" in window)) return;
   const byId = new Map(links.map((l) => [l.dataset.section, l]));
+  const sections = $$("main section[id]");
+  const order = sections.map((s) => s.id);
+  const visible = new Set();
   const obs = new IntersectionObserver(
     (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          links.forEach((l) => l.removeAttribute("aria-current"));
-          const link = byId.get(entry.target.id);
-          if (link) link.setAttribute("aria-current", "true");
-        }
-      });
+      entries.forEach((e) => (e.isIntersecting ? visible.add(e.target.id) : visible.delete(e.target.id)));
+      // topmost visible section that has a matching nav link wins; clears when none
+      const active = order.find((id) => visible.has(id) && byId.has(id));
+      links.forEach((l) => l.removeAttribute("aria-current"));
+      if (active) byId.get(active).setAttribute("aria-current", "true");
     },
     { rootMargin: "-45% 0px -50% 0px" }
   );
-  $$("main section[id]").forEach((s) => obs.observe(s));
+  sections.forEach((s) => obs.observe(s));
 }
 
 let revealObserver = null;
+let revealsInitialized = false;
 function observeReveals() {
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const items = $$(".reveal:not(.is-visible)");
-  if (reduce || !("IntersectionObserver" in window)) {
+  // After the first scroll-reveal pass (e.g. on a language toggle re-render),
+  // show freshly rendered nodes instantly instead of re-animating them.
+  if (reduce || !("IntersectionObserver" in window) || revealsInitialized) {
     items.forEach((i) => i.classList.add("is-visible"));
+    revealsInitialized = true;
     return;
   }
+  revealsInitialized = true;
   if (!revealObserver) {
     revealObserver = new IntersectionObserver(
       (entries, o) => {

@@ -11,9 +11,10 @@ html[dir="rtl"] .keep-ltr {
   display: inline-block;
 }
 
-/* Email / URL / phone-like tokens read left-to-right even in RTL */
-html[dir="rtl"] a[href^="mailto:"],
-html[dir="rtl"] .ltr-token {
+/* Raw address/URL tokens read left-to-right even in RTL (NOT the labelled
+   Email button, whose visible text is a translated label). */
+html[dir="rtl"] .ltr-token,
+html[dir="rtl"] .contact-email a[href^="mailto:"] {
   direction: ltr;
   unicode-bidi: isolate;
 }

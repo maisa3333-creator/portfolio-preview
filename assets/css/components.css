@@ -28,7 +28,8 @@
   color: var(--c-black);
   border-color: var(--c-red);
 }
-.btn--primary:hover { background: var(--c-red-active); border-color: var(--c-red-active); box-shadow: var(--shadow-hover); }
+/* hover inverts to red-on-black (5.6:1) to keep AA at the button's text size */
+.btn--primary:hover { background: var(--c-black); color: var(--c-red); border-color: var(--c-black); box-shadow: var(--shadow-hover); }
 .btn--primary:active { box-shadow: var(--shadow-active); }
 
 /* Ghost: transparent with red border, black label on light surfaces. */
@@ -49,12 +50,15 @@
 
 /* --- Inline / text links --- */
 .link {
-  color: var(--c-red);
+  color: var(--c-black);                 /* accessible on light surfaces */
   font-weight: var(--fw-bold);
-  border-block-end: 1px solid transparent;
-  transition: color var(--transition), border-color var(--transition);
+  text-decoration: underline;
+  text-decoration-color: var(--c-red);   /* red accent via underline (non-text) */
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  transition: text-decoration-color var(--transition), color var(--transition);
 }
-.link:hover { color: var(--c-red-active); border-block-end-color: currentColor; }
+.link:hover { text-decoration-color: var(--c-red-active); }
 .section--dark .link { color: var(--c-orange); }
 .section--dark .link:hover { color: var(--c-white); }
 .link--external::after { content: "↗"; margin-inline-start: 0.25em; font-weight: var(--fw-bold); }
@@ -88,7 +92,7 @@ html[dir="rtl"] .link--external::after { content: "↖"; }
 
 /* --- Hero --- */
 .hero { padding-block: clamp(var(--sp-44), 9vw, 120px); }
-.hero__eyebrow { color: var(--c-red); margin-block-end: var(--sp-16); }
+.hero__eyebrow { margin-block-end: var(--sp-16); }
 .hero__name { margin-block-end: var(--sp-12); }
 .hero__title { font-size: var(--fs-h2); font-weight: var(--fw-bold); color: var(--c-red); margin-block-end: var(--sp-24); }
 .hero__tagline { max-width: 46ch; margin-block-end: var(--sp-36); }

@@ -17,8 +17,9 @@
 .section--dark { background: var(--bg-dark); color: var(--text-on-dark); }
 .section--surface { background: var(--bg-surface); color: var(--text-strong); }
 .section__head { margin-block-end: var(--sp-36); max-width: 60ch; }
-.section__head .eyebrow { color: var(--c-red); display: block; margin-block-end: var(--sp-12); }
-.section--dark .section__head .eyebrow { color: var(--c-orange); }
+.section__head .eyebrow { margin-block-end: var(--sp-12); }
+.section--dark .eyebrow { color: var(--c-orange); }              /* 11:1 on black */
+.section--dark .eyebrow::before { background: var(--c-orange); }
 
 /* --- Header / nav --- */
 .site-header {

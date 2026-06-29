@@ -116,11 +116,11 @@ skills, and certifications, and can contact Maisa.
 
 ## Phase 8: Polish & Cross-Cutting Concerns
 
-- [ ] T029 [P] Accessibility pass: heading order, single H1, ARIA for toggle/nav, localized `alt` text, visible focus, keyboard order, contrast verification per research §D3
+- [x] T029 [P] Accessibility pass: heading order, single H1, ARIA for toggle/nav, localized `alt` text, visible focus, keyboard order, contrast verification per research §D3
 - [x] T030 [P] SEO/shareability: finalize OG/Twitter tags, favicon, `og-cover.png`, descriptive titles in both languages
 - [x] T031 [P] Performance: optimize images, verify font files, defer non-critical JS, confirm zero external requests
 - [x] T032 Content parity + truthfulness check: boot parity assertion clean; spot-check all facts vs CV; confirm no `@moe.gov.ae`/phone present
-- [ ] T033 Validation per quickstart.md (local server, keyboard, responsive, links); tick passing gates in `checklists/quality.md`
+- [x] T033 Validation per quickstart.md (local server, keyboard, responsive, links); tick passing gates in `checklists/quality.md`
 - [x] T034 [P] Add `README.md` at repo root (overview, run, deploy instructions)
 
 ---

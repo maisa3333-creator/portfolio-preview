@@ -51,6 +51,18 @@ h3, .h3 { font-size: var(--fs-h3); font-weight: var(--fw-bold); }
   font-weight: var(--fw-bold);
   text-transform: uppercase;
   letter-spacing: 0.14em;
+  color: var(--c-black);                 /* accessible: black text on light surfaces */
+  display: flex;
+  align-items: center;
+  gap: var(--sp-8);
+  width: fit-content;
+}
+.eyebrow::before {                       /* red accent bar (decorative, not text) */
+  content: "";
+  flex: none;
+  inline-size: 24px;
+  block-size: 3px;
+  background: var(--c-red);
 }
 html[lang="ar"] .eyebrow { letter-spacing: 0; } /* no tracking in Arabic */
 

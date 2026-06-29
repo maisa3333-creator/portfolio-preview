@@ -1,0 +1,29 @@
+/* ==========================================================================
+   rtl.css — Right-to-left overrides for Arabic (html[dir="rtl"])
+   Most mirroring is automatic via CSS logical properties; only a few
+   physical-direction details need explicit handling here.
+   ========================================================================== */
+
+/* Arabic numerals/dates and Latin links inside Arabic text stay LTR-isolated */
+html[dir="rtl"] .keep-ltr {
+  direction: ltr;
+  unicode-bidi: isolate;
+  display: inline-block;
+}
+
+/* Email / URL / phone-like tokens read left-to-right even in RTL */
+html[dir="rtl"] a[href^="mailto:"],
+html[dir="rtl"] .ltr-token {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+/* Slightly relax line-height for Arabic script legibility */
+html[lang="ar"] body { line-height: 1.8; }
+html[lang="ar"] .tl-item__bullets li { line-height: 1.9; }
+
+/* Arabic headings: Tajawal reads better a touch heavier tracking-free (already 0) */
+html[lang="ar"] .hero__title { font-weight: var(--fw-bold); }
+
+/* Monogram letter should not mirror */
+html[dir="rtl"] .nav__brand .monogram { direction: ltr; }

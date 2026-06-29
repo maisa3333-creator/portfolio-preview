@@ -24,11 +24,11 @@ repo-root relative (the GitHub Pages user-site root).
 
 **Purpose**: Project scaffold and design foundation.
 
-- [ ] T001 Create static scaffold: `index.html` head/skeleton, `404.html`, `.nojekyll`, and `assets/css/`, `assets/js/`, `assets/fonts/`, `assets/img/` directories at repo root
-- [ ] T002 [P] Create `assets/css/tokens.css` — CSS custom properties for the 8-color palette, 4px spacing scale, fluid type scale (research §D2), breakpoints, and 1440px/12-col grid
-- [ ] T003 [P] Self-host fonts: download Familjen Grotesk + Tajawal `woff2` into `assets/fonts/` and declare `@font-face` (`font-display: swap`) in `assets/css/base.css`
-- [ ] T004 [P] Add portrait `assets/img/maisa.png`, create `favicon.svg` (palette monogram), and generate `assets/img/og-cover.png` (social preview)
-- [ ] T005 Create `assets/css/base.css` — modern reset, base element typography, font stacks, visible focus styles, `prefers-reduced-motion` baseline
+- [x] T001 Create static scaffold: `index.html` head/skeleton, `404.html`, `.nojekyll`, and `assets/css/`, `assets/js/`, `assets/fonts/`, `assets/img/` directories at repo root
+- [x] T002 [P] Create `assets/css/tokens.css` — CSS custom properties for the 8-color palette, 4px spacing scale, fluid type scale (research §D2), breakpoints, and 1440px/12-col grid
+- [x] T003 [P] Self-host fonts: download Familjen Grotesk + Tajawal `woff2` into `assets/fonts/` and declare `@font-face` (`font-display: swap`) in `assets/css/base.css`
+- [x] T004 [P] Add portrait `assets/img/maisa.png`, create `favicon.svg` (palette monogram), and generate `assets/img/og-cover.png` (social preview)
+- [x] T005 Create `assets/css/base.css` — modern reset, base element typography, font stacks, visible focus styles, `prefers-reduced-motion` baseline
 
 ---
 
@@ -38,13 +38,13 @@ repo-root relative (the GitHub Pages user-site root).
 
 **⚠️ CRITICAL**: No user-story section work begins until this phase is complete.
 
-- [ ] T006 Create `assets/js/content.js` — i18n dictionary with ALL keys per data-model.md (English complete; Arabic stub keys present for parity, filled in US2)
-- [ ] T007 [P] Create `assets/js/i18n.js` — set `<html lang/dir>`, swap `[data-i18n]` nodes, update `<title>`/meta, persist `localStorage["pref-lang"]`, default English, parity assertion (warn on missing key)
-- [ ] T008 Create `assets/js/main.js` — boot: render dynamic lists (highlights/experience/skills/training) from `content.js`, wire toggle + nav + back-to-top + current year, init i18n
-- [ ] T009 [P] Create `assets/css/layout.css` — container, 12-col grid, section rhythm, sticky header/nav, footer, responsive breakpoints
-- [ ] T010 [P] Create `assets/css/components.css` — buttons (contrast-safe per research §D3), cards, links, timeline, badges; `border-radius:0`, tokens only
-- [ ] T011 [P] Create `assets/css/rtl.css` — minimal `dir="rtl"` directional overrides (logical props do the rest)
-- [ ] T012 Build `index.html` shell: `<head>` SEO/OG/meta/lang, skip-link, header (name/monogram, section nav, language toggle), `<main>` with 8 empty section landmarks + ids, `<footer>`; link all 5 CSS files + JS modules
+- [x] T006 Create `assets/js/content.js` — i18n dictionary with ALL keys per data-model.md (English complete; Arabic stub keys present for parity, filled in US2)
+- [x] T007 [P] Create `assets/js/i18n.js` — set `<html lang/dir>`, swap `[data-i18n]` nodes, update `<title>`/meta, persist `localStorage["pref-lang"]`, default English, parity assertion (warn on missing key)
+- [x] T008 Create `assets/js/main.js` — boot: render dynamic lists (highlights/experience/skills/training) from `content.js`, wire toggle + nav + back-to-top + current year, init i18n
+- [x] T009 [P] Create `assets/css/layout.css` — container, 12-col grid, section rhythm, sticky header/nav, footer, responsive breakpoints
+- [x] T010 [P] Create `assets/css/components.css` — buttons (contrast-safe per research §D3), cards, links, timeline, badges; `border-radius:0`, tokens only
+- [x] T011 [P] Create `assets/css/rtl.css` — minimal `dir="rtl"` directional overrides (logical props do the rest)
+- [x] T012 Build `index.html` shell: `<head>` SEO/OG/meta/lang, skip-link, header (name/monogram, section nav, language toggle), `<main>` with 8 empty section landmarks + ids, `<footer>`; link all 5 CSS files + JS modules
 
 ---
 
@@ -55,14 +55,14 @@ skills, and certifications, and can contact Maisa.
 
 **Independent Test**: Load page; read hero → experience; reach Contact (email + LinkedIn). All in English.
 
-- [ ] T013 [US1] Build Hero in `index.html` (H1 name, title, tagline, primary "Contact" CTA, secondary "Download CV" CTA, portrait) with `data-i18n` keys
-- [ ] T014 [P] [US1] Build About section in `index.html` (profile summary) with `data-i18n` keys
-- [ ] T015 [P] [US1] Build Highlights section in `index.html` — render 5 achievement cards from `content.js`
-- [ ] T016 [P] [US1] Build Experience timeline in `index.html` — render 3 roles (org, type, dates, bullets) newest-first from `content.js`
-- [ ] T017 [P] [US1] Build Skills section in `index.html` — render 9 skill badges from `content.js`
-- [ ] T018 [P] [US1] Build Training & Certifications section in `index.html` — render 4 items from `content.js`
-- [ ] T019 [US1] Build Contact section in `index.html` — `mailto:` personal email + LinkedIn (new tab, `rel="noopener"`); assert NO work email/phone anywhere
-- [ ] T020 [US1] Fill English content in `content.js` for all US1 sections verbatim from `Maisa_Alosaimi_QoL.pdf`; verify each fact against the CV
+- [x] T013 [US1] Build Hero in `index.html` (H1 name, title, tagline, primary "Contact" CTA, secondary "Download CV" CTA, portrait) with `data-i18n` keys
+- [x] T014 [P] [US1] Build About section in `index.html` (profile summary) with `data-i18n` keys
+- [x] T015 [P] [US1] Build Highlights section in `index.html` — render 5 achievement cards from `content.js`
+- [x] T016 [P] [US1] Build Experience timeline in `index.html` — render 3 roles (org, type, dates, bullets) newest-first from `content.js`
+- [x] T017 [P] [US1] Build Skills section in `index.html` — render 9 skill badges from `content.js`
+- [x] T018 [P] [US1] Build Training & Certifications section in `index.html` — render 4 items from `content.js`
+- [x] T019 [US1] Build Contact section in `index.html` — `mailto:` personal email + LinkedIn (new tab, `rel="noopener"`); assert NO work email/phone anywhere
+- [x] T020 [US1] Fill English content in `content.js` for all US1 sections verbatim from `Maisa_Alosaimi_QoL.pdf`; verify each fact against the CV
 
 **Checkpoint**: English MVP is viewable and contactable.
 
@@ -74,10 +74,10 @@ skills, and certifications, and can contact Maisa.
 
 **Independent Test**: Toggle → all text Arabic + `dir=rtl`; reload → still Arabic; clear storage → English.
 
-- [ ] T021 [US2] Author complete Arabic translations for every key in `content.js` (mark `// REVIEW` for Maisa); ensure parity (equal keys + array lengths)
-- [ ] T022 [US2] Wire language toggle in `i18n.js`/`main.js`: set lang/dir, swap all nodes, update title/meta, persist; English default (FR-015)
-- [ ] T023 [P] [US2] Complete RTL mirroring in `assets/css/rtl.css`; verify nav, timeline, cards, badges mirror correctly
-- [ ] T024 [P] [US2] Add per-language `<title>`/meta description + `hreflang`/`lang` handling in head + `i18n.js`
+- [x] T021 [US2] Author complete Arabic translations for every key in `content.js` (mark `// REVIEW` for Maisa); ensure parity (equal keys + array lengths)
+- [x] T022 [US2] Wire language toggle in `i18n.js`/`main.js`: set lang/dir, swap all nodes, update title/meta, persist; English default (FR-015)
+- [x] T023 [P] [US2] Complete RTL mirroring in `assets/css/rtl.css`; verify nav, timeline, cards, badges mirror correctly
+- [x] T024 [P] [US2] Add per-language `<title>`/meta description + `hreflang`/`lang` handling in head + `i18n.js`
 
 **Checkpoint**: Site is fully bilingual with RTL.
 
@@ -89,7 +89,7 @@ skills, and certifications, and can contact Maisa.
 
 **Independent Test**: Activate "Download CV" → PDF opens/downloads.
 
-- [ ] T025 [US3] Wire "Download CV" links (hero + contact) to `Maisa_Alosaimi_QoL.pdf` with localized accessible labels + `download` attr; confirm file served at root
+- [x] T025 [US3] Wire "Download CV" links (hero + contact) to `Maisa_Alosaimi_QoL.pdf` with localized accessible labels + `download` attr; confirm file served at root
 
 ---
 
@@ -99,7 +99,7 @@ skills, and certifications, and can contact Maisa.
 
 **Independent Test**: Activate Qaddha link → prototype opens in a new tab.
 
-- [ ] T026 [US4] Build Strategic Initiatives / Qaddha section in `index.html` — bilingual summary + external link to `https://preview--qadha-recognition-hub.lovable.app/` (new tab, `rel="noopener noreferrer"`)
+- [x] T026 [US4] Build Strategic Initiatives / Qaddha section in `index.html` — bilingual summary + external link to `https://preview--qadha-recognition-hub.lovable.app/` (new tab, `rel="noopener noreferrer"`)
 
 ---
 
@@ -109,19 +109,19 @@ skills, and certifications, and can contact Maisa.
 
 **Independent Test**: At 360px width, content is single-column, legible, no horizontal scroll, tappable controls.
 
-- [ ] T027 [US5] Implement responsive behavior in `assets/css/layout.css`: mobile single-column, collapsible nav, full-width buttons, type/spacing scale-down; verify no horizontal scroll at 360/768/1024/1600px
-- [ ] T028 [P] [US5] Ensure ≥44×44px touch targets + ≥8px spacing on nav links, buttons, badges, and links
+- [x] T027 [US5] Implement responsive behavior in `assets/css/layout.css`: mobile single-column, collapsible nav, full-width buttons, type/spacing scale-down; verify no horizontal scroll at 360/768/1024/1600px
+- [x] T028 [P] [US5] Ensure ≥44×44px touch targets + ≥8px spacing on nav links, buttons, badges, and links
 
 ---
 
 ## Phase 8: Polish & Cross-Cutting Concerns
 
 - [ ] T029 [P] Accessibility pass: heading order, single H1, ARIA for toggle/nav, localized `alt` text, visible focus, keyboard order, contrast verification per research §D3
-- [ ] T030 [P] SEO/shareability: finalize OG/Twitter tags, favicon, `og-cover.png`, descriptive titles in both languages
-- [ ] T031 [P] Performance: optimize images, verify font files, defer non-critical JS, confirm zero external requests
-- [ ] T032 Content parity + truthfulness check: boot parity assertion clean; spot-check all facts vs CV; confirm no `@moe.gov.ae`/phone present
+- [x] T030 [P] SEO/shareability: finalize OG/Twitter tags, favicon, `og-cover.png`, descriptive titles in both languages
+- [x] T031 [P] Performance: optimize images, verify font files, defer non-critical JS, confirm zero external requests
+- [x] T032 Content parity + truthfulness check: boot parity assertion clean; spot-check all facts vs CV; confirm no `@moe.gov.ae`/phone present
 - [ ] T033 Validation per quickstart.md (local server, keyboard, responsive, links); tick passing gates in `checklists/quality.md`
-- [ ] T034 [P] Add `README.md` at repo root (overview, run, deploy instructions)
+- [x] T034 [P] Add `README.md` at repo root (overview, run, deploy instructions)
 
 ---
 

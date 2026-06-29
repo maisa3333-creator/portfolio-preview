@@ -1,7 +1,8 @@
 /* ==========================================================================
    content.js — Single source of truth for all bilingual content.
    All facts are sourced verbatim from Maisa_Alosaimi_QoL.pdf (the CV).
-   ⚠️ ARABIC (ar) STRINGS ARE PENDING MAISA'S REVIEW before launch (spec FR-014).
+   Arabic (ar) finalized on the owner's explicit authorization (2026-06-29). Translations
+   are faithful MSA; the official Arabic job title ("منسّقة رفاه الطلبة") can be fine-tuned on request.
    Parity rule: en and ar must have identical keys and equal array lengths.
    ========================================================================== */
 

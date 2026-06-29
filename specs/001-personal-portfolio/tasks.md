@@ -153,3 +153,11 @@ skills, and certifications, and can contact Maisa.
 - **By story**: Setup 5 · Foundational 7 · US1 8 · US2 4 · US3 1 · US4 1 · US5 2 · Polish 6
 - **Parallelizable**: 17 tasks marked `[P]`
 - **MVP scope**: Phases 1–3 (US1)
+
+---
+
+## Phase 9: Convergence
+
+> Appended by `/speckit-converge` — remaining work to reach launch-ready. Existing tasks above are unchanged.
+
+- [ ] T035 Obtain Maisa's review and approval of ALL Arabic content in `assets/js/content.js` (name, title, awards, role titles, bullet wording — esp. the official Arabic job title and register notes in verification.md), apply any corrections, then remove the `// REVIEW` gate, per FR-014 (partial). **Launch blocker.**
